@@ -1,0 +1,91 @@
+.button-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 95px;
+  margin-top: 350px;
+}
+
+/*Default Fancy Button Styles*/
+.fancy-button {
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fancy-button:hover {
+  transform: scale(107%)
+}
+
+.fancy-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(255, 118, 136, 0.4);
+}
+
+.logo-img {
+  width: 50%;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+
+/*Button Variant Styles*/
+.fancy-button.github {
+  background: #c3c8cfa9;
+  box-shadow: 0 0 15px rgba(32, 63, 241, 0.603);
+}
+.fancy-button.github:hover {
+  background: linear-gradient(135deg, #33516d, #474086 );
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.logo-img.github{
+  width: 100%;
+  scale: 110%;
+}
+
+/*linkedin*/
+.fancy-button.linkedin {
+  background: #2d74c5;
+  box-shadow: 0 0 20px #5342af;
+}
+.fancy-button.linkedin:hover {
+  background: linear-gradient(135deg, #33516d, #474086 );
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.logo-img.linkedin{
+  width: 100%;
+  scale: 110%;
+}
+
+/*aboutme*/
+.fancy-button.aboutme{
+  background: #c3c8cfa9;
+  box-shadow: 0 0 20px #5342af;
+}
+.fancy-button.aboutme:hover {
+  background: linear-gradient(135deg, #33516d, #474086 );
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.logo-img.aboutme{
+  width: 100%;
+  scale: 110%;
+}
+
+/*contactme*/
+.fancy-button.contactme{
+  background: #2d74c5;
+  box-shadow: 0 0 20px #5342af;
+}
+.fancy-button.contactme:hover {
+  background: linear-gradient(135deg, #33516d, #474086 );
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.logo-img.contactme{
+  width: 100%;
+  scale: 110%;
+}
+
