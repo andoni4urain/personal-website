@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   gap: 95px;
-  margin-top: 350px;
+  margin-top: 200px;
 }
 
 /*Default Fancy Button Styles*/
@@ -11,7 +11,7 @@
   width: 150px;
   height: 150px;
   padding: 0;
-  border: none;
+  border: 3px solid rgb(0, 0, 0);
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -35,11 +35,12 @@
 
 /*Button Variant Styles*/
 .fancy-button.github {
-  background: #c3c8cfa9;
-  box-shadow: 0 0 15px rgba(32, 63, 241, 0.603);
+  background: #0B1220;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.45);
+  border: 3px solid #3BA3C9;
 }
 .fancy-button.github:hover {
-  background: linear-gradient(135deg, #33516d, #474086 );
+  background: rgba(65, 84, 96, 10);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 .logo-img.github{
@@ -49,43 +50,92 @@
 
 /*linkedin*/
 .fancy-button.linkedin {
-  background: #2d74c5;
-  box-shadow: 0 0 20px #5342af;
+  background: #0B1220;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+  border: 3px solid #94A3B8
 }
 .fancy-button.linkedin:hover {
-  background: linear-gradient(135deg, #33516d, #474086 );
+  background: rgba(65, 84, 96, 10);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 .logo-img.linkedin{
-  width: 100%;
-  scale: 110%;
+  width: 75%;
+  scale: 100%;
+  border-radius: 35%;
 }
 
-/*aboutme*/
-.fancy-button.aboutme{
-  background: #c3c8cfa9;
-  box-shadow: 0 0 20px #5342af;
-}
-.fancy-button.aboutme:hover {
-  background: linear-gradient(135deg, #33516d, #474086 );
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-}
-.logo-img.aboutme{
-  width: 100%;
-  scale: 110%;
-}
-
-/*contactme*/
-.fancy-button.contactme{
-  background: #2d74c5;
-  box-shadow: 0 0 20px #5342af;
-}
-.fancy-button.contactme:hover {
-  background: linear-gradient(135deg, #33516d, #474086 );
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-}
-.logo-img.contactme{
-  width: 100%;
-  scale: 110%;
+/*More Buttons*/
+.btn {
+  -webkit-tap-highlight-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.75rem 1.1rem;
+  border-radius: 7px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  border: 1px solid #1E293B;
+  background: #111827;
+  color: #E6EEF4;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, background-color 0.16s ease, border-color 0.16s ease, opacity 0.16s ease;
 }
 
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 0 3px rgba(59, 163, 201, 0.35);
+}
+
+.btn-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* ===== Primary (View Projects) ===== */
+.btn--primary {
+  background: #3BA3C9;
+  border-color: #2C8DB0;
+  color: #E6EEF4; /* dark text for contrast */
+}
+
+.btn--primary:hover {
+  background: #2C8DB0;
+  border-color: #247896;
+  box-shadow: 0 14px 38px rgba(59, 163, 201, 0.25);
+}
+
+.btn--primary:active {
+  background: #247896;
+}
+
+/* ===== Ghost/Secondary (Contact Me) ===== */
+.btn--ghost {
+  background: transparent;
+  border-color: #1E293B;
+  color: #E6EEF4;
+}
+
+.btn--ghost:hover {
+  background: rgba(59, 163, 201, 0.1);
+  border-color: #2C8DB0;
+}
+
+.btn--ghost:active {
+  opacity: 0.9;
+}
+
+/* Sizes (optional) */
+.btn--lg{ padding: .9rem 1.25rem; font-size:1.05rem; }
+.btn--sm{ padding: .55rem .85rem; font-size:.92rem; }

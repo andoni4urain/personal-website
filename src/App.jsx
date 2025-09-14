@@ -1,22 +1,31 @@
 import FancyButton from "./components/FancyButton"
+import Header from "./components/Header";
 import GithubLogo from "./assets/GithubLogo.png";
-import LinkedinLogo from "./assets/LinkedinLogo.png";
-import AboutMe from "./assets/AboutMe.png";
-import ContactMe from "./assets/ContactMe.png";
+import LinkedinLogo from "./assets/BlackLinkedIn.png";
 import "./styling/buttons.css";
+import "./styling/app.css";
 
 function App() {
 
   return (
-    <main>
-      <h1>Hello World</h1>
+    <div>
+      <Header/>
+      <main className="hero">
+        <h1>Andoni Urain — Full-Stack Developer</h1>
+        <p>I build performant, scalable web & mobile apps using various technologies.</p>
+          <div className="btn-wrapper">
+            <button className="btn btn--primary btn--lg">View Projects</button>
+            <button className="btn btn--ghost btn--lg">Contact Me</button>
+        </div>
+
+      </main>
+      
+
       <span className="button-row">
         <FancyButton image={GithubLogo} altText={"Github Logo"} variant="github"></FancyButton>
         <FancyButton image={LinkedinLogo} altText={"React Logo"} variant="linkedin"></FancyButton>
-        <FancyButton image={AboutMe} altText={"About Me"} variant="aboutme"></FancyButton>
-        <FancyButton image={ContactMe} altText={"Contact Me"} variant="contactme"></FancyButton>
       </span>
-    </main>
+    </div>
     
   )
 }
