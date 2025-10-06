@@ -12,6 +12,7 @@
 
 /* Modal container */
 .modal {
+  position: relative;
   background: #111827;
   color: #E6EEF4;
   border: 1px solid #1E293B;
@@ -55,4 +56,16 @@
 @keyframes slideUp {
   from { transform: translateY(20px); opacity: 0; }
   to   { transform: translateY(0); opacity: 1; }
+}
+
+.contact-email a {
+  color: #E6EEF4;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.contact-email a:hover {
+  color: #3BA3C9;
+  text-decoration: underline;
 }

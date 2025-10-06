@@ -1,0 +1,114 @@
+/* ===== List container (optional) ===== */
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+/* ===== Card ===== */
+.project-card {
+  background: #111827;              /* surface */
+  color: #E6EEF4;                   /* text */
+  border: 1px solid #1E293B;        /* border */
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  padding: 18px;
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+  margin-top: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: #2C8DB0;
+  box-shadow: 0 16px 38px rgba(0,0,0,0.55);
+}
+
+/* ===== Left column (text) ===== */
+.project-body {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  gap: 10px;
+  flex: 1;
+  min-width: 0; /* enable text truncation if needed */
+}
+
+.project-title {
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 700;
+  margin: 0;
+}
+
+.project-desc {
+  margin: 0;
+  color: #94A3B8;                   /* secondary text */
+  line-height: 1.45;
+}
+
+/* ===== Tech badges ===== */
+.tech-header{
+  margin: 0;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-badge {
+  background: #223043;              /* dark slate pill */
+  color: #E6EEF4;
+  border: 1px solid #2C8DB0;        /* accent edge */
+  padding: 1px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+}
+
+/* ===== Actions (links) ===== */
+.project-actions {
+  display: flex;
+  gap: 18px;
+}
+
+.project-actions a {
+  color: #3BA3C9;                   /* accent link */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-actions a:hover {
+  color: #2C8DB0;
+  text-decoration: underline;
+}
+
+/* ===== Right column (thumbnail) ===== */
+.project-thumb {
+  width: 240px;                     /* tweak as needed */
+  max-width: 32%;
+  border-radius: 10px;
+  border: 1px solid #1E293B;
+  background: #0B1220;              /* fallback when no image */
+  object-fit: cover;
+  aspect-ratio: 4 / 3;              /* consistent box */
+  flex-shrink: 0;
+}
+
+/* ===== Responsive: stack on small screens ===== */
+@media (max-width: 700px) {
+  .project-card {
+    flex-direction: column;
+  }
+  .project-thumb {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+}

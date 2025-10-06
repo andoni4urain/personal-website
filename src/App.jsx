@@ -3,15 +3,18 @@ import { createPortal } from "react-dom"
 import FancyButton from "./components/FancyButton";
 import Header from "./components/Header";
 import MyProjects from "./components/MyProjects";
+import ContactInfo from "./components/ContactInfo";
+import AIChatBox from "./components/AIChatBox";
 import GithubLogo from "./assets/GithubLogo.png";
 import LinkedinLogo from "./assets/BlackLinkedIn.png";
 import "./styling/buttons.css";
 import "./styling/app.css";
 import "./styling/contactinfo.css";
-import ContactInfo from "./components/ContactInfo";
+
 
 function App() {
 
+  {/*State for main 2 buttons*/}
   const [projectsState, setProjects] = useState(false);
   const [contactsState, setContacts] = useState(false);
   
@@ -38,12 +41,16 @@ function App() {
       </main>
 
       <span className="button-row">
-        <FancyButton image={GithubLogo} altText={"Github Logo"} variant="github"></FancyButton>
-        <FancyButton image={LinkedinLogo} altText={"React Logo"} variant="linkedin"></FancyButton>
+        <FancyButton link="https://github.com/andoni4urain" image={GithubLogo} altText={"Github Logo"} variant="github"></FancyButton>
+        <FancyButton link="https://www.linkedin.com/in/andoni-urain-0643b8333/" image={LinkedinLogo} altText={"linkedin Logo"} variant="linkedin"></FancyButton>
       </span>
 
+      <AIChatBox></AIChatBox>
+
+      {/*Displays projects when true*/}
       {projectsState ? <MyProjects/>:null}
 
+      {/*Displays contact me modal when true*/}
       <div>
       {contactsState && createPortal(
         <ContactInfo onClose={() => setContacts(false)} />,
