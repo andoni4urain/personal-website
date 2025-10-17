@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import MyProjects from "./components/MyProjects";
 import ContactInfo from "./components/ContactInfo";
 import AIChatBox from "./components/AIChatBox";
-import GithubLogo from "./assets/GithubLogo.png";
+import GithubLogo from "./assets/GitHubLogo.png";
 import LinkedinLogo from "./assets/BlackLinkedIn.png";
 import "./styling/buttons.css";
 import "./styling/app.css";
