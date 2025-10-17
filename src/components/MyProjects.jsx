@@ -3,7 +3,7 @@ import "../styling/project.css"
 import ChefCScreenshot from "../assets/ChefCScreenshot.png"
 import SiteFrontPage from "../assets/sitefrontpage.png"
 import Placeholder from "../assets/meme.png"
-
+//fixes
 export default function MyProjects(){
 
     return(
