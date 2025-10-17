@@ -32,3 +32,36 @@ body{
     margin: 0 auto; max-width: 720px;
     margin-bottom: 40px;
 }
+
+/* Expand/collapse the whole block smoothly */
+.projects-wrap {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 320ms ease, opacity 220ms ease;
+}
+.projects-wrap.is-open {
+  max-height: 2000px; /* bigger than your content height */
+  opacity: 1;
+}
+
+/* Animate items inside when it appears */
+.projects-enter .project-list > * {
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+  animation: projIn 360ms ease forwards;
+}
+
+/* Stagger each card */
+.projects-enter .project-list > *:nth-child(1) { animation-delay: 40ms; }
+.projects-enter .project-list > *:nth-child(2) { animation-delay: 80ms; }
+.projects-enter .project-list > *:nth-child(3) { animation-delay: 120ms; }
+/* keep going if you add more */
+
+/* Keyframes */
+@keyframes projIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

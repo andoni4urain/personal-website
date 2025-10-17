@@ -1,5 +1,6 @@
 // HelpChatbot.jsx
 import { useEffect, useRef, useState } from "react";
+import { getResponseFromBot } from "../ai";
 import "../styling/aichatbox.css"
 
 export default function HelpChatbot() {
@@ -17,23 +18,31 @@ export default function HelpChatbot() {
     }
   }, [messages, expanded]);
 
-  const send = (e) => {
+  const send = async (e) => {
     e.preventDefault();
     const text = input.trim();
     if (!text) return;
+
+    // Users messages gets auto added
     setMessages((m) => [...m, { role: "user", text }]);
     setInput("");
-    // Fake AI reply
-    setTimeout(() => {
+
+    try {
+    // Call Claude AI for response
+    const reply = await getResponseFromBot(text);
+
+    // Add AI response to chat
+      setMessages((m) => [...m, { role: "ai", text: reply }]);
+    }   catch (error) {
+      console.error("Error fetching AI response:", error);
       setMessages((m) => [
         ...m,
         {
           role: "ai",
-          text:
-            "Sample reply: I can help with projects, styling, or navigation. What would you like to do?",
+          text: "Sorry, I had trouble reaching my AI brain right now. Try again in a moment!",
         },
       ]);
-    }, 500);
+    }
   };
 
   return (

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { createPortal } from "react-dom"
 import FancyButton from "./components/FancyButton";
 import Header from "./components/Header";
@@ -17,10 +17,22 @@ function App() {
   {/*State for main 2 buttons*/}
   const [projectsState, setProjects] = useState(false);
   const [contactsState, setContacts] = useState(false);
+  const projectsRef = useRef(null); //createRef
   
 
-  function showprojects(){
-        setProjects(() => !projectsState);
+  function showprojects() {
+    const newVal = !projectsState;
+    setProjects(newVal);
+
+    // wait a tick for the section to render before scrolling
+    if (!projectsState && projectsRef.current) {
+      setTimeout(() => {
+        projectsRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 200); // delay to let animation start
+    }
   }
 
   function showContact(){
@@ -32,7 +44,8 @@ function App() {
       <Header/>
       <main className="hero">
         <h1>Andoni Urain — Full-Stack Developer</h1>
-        <p>I build performant, scalable web & mobile apps using various technologies.</p>
+        <p>Full-stack developer crafting fast, scalable experiences for web and mobile.
+          Check out my latest projects or get in touch to discuss new ideas.</p>
           <div className="btn-wrapper">
             <button className={projectsState ? "btn btn--primary btn--lg btn--primary--selected" : "btn btn--primary btn--lg"} onClick={showprojects}>{projectsState ? "Close" : "View"} Projects</button>
             <button className={contactsState ? "btn btn--ghost btn--lg btn--ghost--selected" : "btn btn--ghost btn--lg"} onClick={showContact}>Contact Me</button>
@@ -47,8 +60,14 @@ function App() {
 
       <AIChatBox></AIChatBox>
 
-      {/*Displays projects when true*/}
-      {projectsState ? <MyProjects/>:null}
+      {/* Displays projects when true */}
+      <div ref={projectsRef} className={`projects-wrap ${projectsState ? "is-open" : ""}`}>
+        {projectsState && (
+          <div className="projects-enter">
+            <MyProjects />
+          </div>
+        )}
+      </div>
 
       {/*Displays contact me modal when true*/}
       <div>

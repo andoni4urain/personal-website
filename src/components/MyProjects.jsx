@@ -1,6 +1,8 @@
 import Project from "./Project.jsx";
 import "../styling/project.css"
 import ChefCScreenshot from "../assets/ChefCScreenshot.png"
+import SiteFrontPage from "../assets/sitefrontpage.png"
+import Placeholder from "../assets/meme.png"
 
 export default function MyProjects(){
 
@@ -16,21 +18,21 @@ export default function MyProjects(){
             />
 
             <Project
-                title="Chef Claude App"
-                description="A simple front-end React application that integrates with an AI API to generate smart responses."
+                title="My Portfolio Website"
+                description="A website built using React to showcase all of my personal projects and information."
                 tech={["React"]}
-                github="https://github.com/andoni4urain/AI-Chef-Project"
+                github="https://github.com/andoni4urain/personal-website"
                 demo="https://ai-chef-project.vercel.app/"
-                image={ChefCScreenshot}
+                image={SiteFrontPage}
             />
 
              <Project
-                title="Chef Claude App"
-                description="A simple front-end React application that integrates with an AI API to generate smart responses."
+                title="And Many More to Come :)"
+                description="Stay tuned..."
                 tech={["React"]}
-                github="https://github.com/andoni4urain/AI-Chef-Project"
-                demo="https://ai-chef-project.vercel.app/"
-                image={ChefCScreenshot}
+                github="https://github.com/andoni4urain/"
+                demo=""
+                image={Placeholder}
             />
 
         </main>

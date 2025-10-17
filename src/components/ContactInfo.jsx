@@ -16,9 +16,8 @@ export default function ContactInfo( {onClose} ){
                 {/* Header */}
                 <h2>Contact Me</h2>
                 <p>
-                    Thanks for checking out my portfolio! I’m{" "}
-                    <strong>Andoni Urain</strong>, a full-stack developer passionate about
-                    building clean, scalable web and mobile applications.
+                    {""}<strong>Let’s connect!</strong> Email is the best way to reach me, and I’m always happy to chat about development, collaboration, or new ideas.
+                    I’m passionate, driven, and enjoy turning great conversations into great projects.
                 </p>
                 {/* Email section */}
                 <div className="contact-email">
