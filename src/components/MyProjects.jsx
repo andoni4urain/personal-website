@@ -22,7 +22,7 @@ export default function MyProjects(){
                 description="A website built using React to showcase all of my personal projects and information."
                 tech={["React"]}
                 github="https://github.com/andoni4urain/personal-website"
-                demo="https://ai-chef-project.vercel.app/"
+                demo="https://andoniurain.com/"
                 image={SiteFrontPage}
             />
 
