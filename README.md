@@ -1,12 +1,42 @@
-# React + Vite
+# 🌐 Andoni Urain — Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source code for my **personal portfolio**, a modern React + Vite site designed to showcase my projects, experience, and skills as a **Full-Stack Developer**.  
+The website highlights my technical work, interactive design sense, and includes an integrated AI chatbot powered by **Claude AI** that can answer questions about me and my projects.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+**Frontend**
+- React (with Vite)
+- Custom CSS animations, responsive layout
+- React hooks for dynamic UI (conditional rendering, state transitions)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Backend / API**
+- Serverless Function via Vercel (`/api/chat.mjs`)
+- Anthropic’s Claude 3 Haiku model for chatbot responses
+- Environment variables securely managed through Vercel
+
+**Deployment**
+- Hosted on [Vercel](https://vercel.com/)
+- Continuous deployment via GitHub
+
+---
+
+## Features
+
+### Portfolio Highlights
+- Interactive “View Projects” section with smooth animations  
+- Scroll-to-reveal project cards including titles, descriptions, tech stacks, and live/GitHub links  
+
+### Smart AI Chatbot
+- Built-in assistant that answers questions about me, my skills, and my projects  
+- Uses Anthropic’s Claude API securely through a backend route  
+- Keeps responses short, professional, and informative  
+
+### Navigation & Design
+- Minimalist landing page with light/dark theme potential  
+- Responsive layout optimized for desktop and mobile  
+- Subtle animations for project cards and transitions  
+
+---
